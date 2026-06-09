@@ -26,9 +26,9 @@ export default defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
     use: {
-    baseURL: 'https://www.google.com',
+    baseURL: 'https://www.playwright.dev',
 
-    headless: true,
+    headless: false,
 
     screenshot: 'only-on-failure',
 
