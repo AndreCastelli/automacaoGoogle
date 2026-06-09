@@ -9,7 +9,7 @@ const {
 } = require('@playwright/test');
 
 Given(
-  'que acesso a home do Playwright',
+  'que acesso a home do AutoTestStore',
   async function () {
 
     await this.documentacaoPage.acessarHome();

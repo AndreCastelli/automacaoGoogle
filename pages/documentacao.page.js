@@ -19,7 +19,7 @@ class DocumentacaoPage extends BasePage {
   };
 
 async acessarHome() {
-  await this.navegar('https://playwright.dev');
+  await this.navegar('https://automationteststore.com/');
 }
 
   async clicarGetStarted() {
