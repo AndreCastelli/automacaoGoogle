@@ -1,0 +1,25 @@
+{
+  "name": "automacaogoogle",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:smoke": "playwright test -g @smoke",
+    "test:regression": "playwright test -g @regression",
+    "report": "playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.2"
+  },
+  "dependencies": {
+    "playwright": "^1.60.0",
+    "playwright-core": "^1.60.0"
+  },
+  "description": ""
+}
