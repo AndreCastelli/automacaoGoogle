@@ -1,4 +1,4 @@
-const BasePage = require('./base.page');
+/* const BasePage = require('./base.page');
 
 class GooglePage extends BasePage {
 
@@ -34,4 +34,4 @@ class GooglePage extends BasePage {
 
 }
 
-module.exports = GooglePage;
+module.exports = GooglePage; */

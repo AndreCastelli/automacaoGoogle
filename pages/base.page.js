@@ -4,20 +4,24 @@ class BasePage {
     this.page = page;
   }
 
-  async navigate(path = '') {
-    await this.page.goto(path);
+async navegar(url) {
+  await this.page.goto(url);
+}
+
+  async aguardarVisibilidade(locator) {
+    await locator.waitFor({
+      state: 'visible'
+    });
   }
 
-  async getTitle() {
-    return await this.page.title();
+  async clicar(locator) {
+    await this.aguardarVisibilidade(locator);
+    await locator.click();
   }
 
-  async reload() {
-    await this.page.reload();
-  }
-
-  async wait(seconds) {
-    await this.page.waitForTimeout(seconds * 1000);
+  async obterTexto(locator) {
+    await this.aguardarVisibilidade(locator);
+    return await locator.textContent();
   }
 
 }

@@ -3,19 +3,18 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "playwright test",
-    "test:headed": "playwright test --headed",
-    "test:ui": "playwright test --ui",
-    "test:smoke": "playwright test -g @smoke",
-    "test:regression": "playwright test -g @regression",
-    "report": "playwright show-report"
+    "test": "cucumber-js",
+    "test:smoke": "cucumber-js --tags @smoke",
+    "test:regression": "cucumber-js --tags @regression"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@cucumber/cucumber": "^12.9.0",
     "@playwright/test": "^1.60.0",
-    "@types/node": "^25.9.2"
+    "@types/node": "^25.9.2",
+    "multiple-cucumber-html-reporter": "^4.0.0"
   },
   "dependencies": {
     "playwright": "^1.60.0",

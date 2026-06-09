@@ -1,4 +1,4 @@
-const { test, expect } = require('@playwright/test');
+/* const { test, expect } = require('@playwright/test');
 const GooglePage = require('../pages/google.page');
 
 test.describe('Google Search', () => {
@@ -37,4 +37,4 @@ test.describe('Google Search', () => {
 
   });
 
-});
+}); */

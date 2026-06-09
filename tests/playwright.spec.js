@@ -1,4 +1,4 @@
-const { test, expect } = require('@playwright/test');
+/* const { test, expect } = require('@playwright/test');
 const PlaywrightPage = require('../pages/playwright.page');
 
 test.describe('Playwright Website', () => {
@@ -25,4 +25,20 @@ test.describe('Playwright Website', () => {
 
   });
 
+  test('@regression Should display correct title', async () => {
+
+  const title = await playwrightPage.getTitle();
+
+  expect(title).toContain('Playwright');
+
 });
+
+test('@regression Should display search button', async () => {
+
+  await expect(
+    playwrightPage.elements.searchButton()
+  ).toBeVisible();
+
+});
+
+}); */
