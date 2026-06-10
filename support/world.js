@@ -1,14 +1,21 @@
-const {setWorldConstructor} = require('@cucumber/cucumber');
+const {
+    setWorldConstructor,
+    World
+} = require('@cucumber/cucumber');
 
-class CustomWorld {
+class CustomWorld extends World {
 
-  constructor() {
+    constructor(options) {
 
-    this.browser = null;
-    this.context = null;
-    this.page = null;
+        super(options);
 
-  }
+        this.browser = null;
+        this.context = null;
+        this.page = null;
+
+        this.usuario = null;
+
+    }
 
 }
 
