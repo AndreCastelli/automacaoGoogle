@@ -19,8 +19,8 @@ Before(async function (scenario) {
 
     this.browser =
         await chromium.launch({
-            headless: false,
-            slowMo: 300
+            headless: !!process.env.CI,
+            slowMo: process.env.CI ? 0 : 300
         });
 
     this.context =
