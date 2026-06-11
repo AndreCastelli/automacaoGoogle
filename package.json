@@ -6,6 +6,8 @@
     "test": "cucumber-js",
     "pretest:formulario": "rimraf allure-results allure-report",
     "test:formulario": "cucumber-js --tags @form && allure generate allure-results -o allure-report",
+    "pretest:compra": "rimraf allure-results allure-report",
+    "test:compra": "cucumber-js --tags @compra && allure generate allure-results -o allure-report",
     "pretest:e2e": "rimraf allure-results allure-report",
     "test:e2e": "cucumber-js --tags @e2e && allure generate allure-results -o allure-report",
     "allure:generate": "allure generate allure-results -o allure-report",
