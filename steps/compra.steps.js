@@ -21,10 +21,7 @@ When(
             'Preencher cadastro',
             async () => {
 
-                // Criar massa específica conforme o exemplo do cenário
                 this.usuario = criarUsuario(usuario);
-
-                console.log('Usuario criado:', this.usuario);
 
                 await this.cadastroPage
                     .preencherCadastro(

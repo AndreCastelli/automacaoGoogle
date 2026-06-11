@@ -10,11 +10,12 @@ const ProdutoPage = require('../pages/produto.page');
 const CarrinhoPage = require('../pages/carrinho.page');
 const CheckoutPage = require('../pages/checkout.page');
 const SucessoPage = require('../pages/sucesso.page');
+const FormularioPage = require('../pages/formulario.page');
 const { criarUsuario } = require('../utils/usuario.factory');
 
 setDefaultTimeout(60000);
 
-Before(async function () {
+Before(async function (scenario) {
 
     this.browser =
         await chromium.launch({
@@ -61,15 +62,35 @@ Before(async function () {
     this.sucessoPage =
         new SucessoPage(this.page);
 
+    this.formularioPage =
+        new FormularioPage(this.page);
+
     await owner('Andre Castelli');
 
-    await epic(
-        'E-commerce'
-    );
+    const tags =
+        scenario.pickle.tags.map(tag => tag.name);
 
-    await feature(
-        'Checkout'
-    );
+    if (tags.includes('@form')) {
+
+        await epic(
+            'Formulário Escolar'
+        );
+
+        await feature(
+            'Cadastro de Aluno'
+        );
+
+    } else {
+
+        await epic(
+            'E-commerce'
+        );
+
+        await feature(
+            'Checkout'
+        );
+
+    }
 
 });
 

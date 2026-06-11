@@ -14,6 +14,7 @@ class CustomWorld extends World {
         this.page = null;
 
         this.usuario = null;
+        this.aluno = null;
 
     }
 
